@@ -9,8 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+int global = 10;
+
+#pragma mark - 定义一个求和函数
+int sum(int a, int b) {
+    int c = global + b;
+    return c + a;
+}
+
 int main(int argc, char * argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
+
+    int c = sum(10, 20);
+    printf("%d",c);
+    
+    return 0;
 }
